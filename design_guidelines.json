@@ -1,0 +1,164 @@
+{
+  "project_name": "Hiba Salim - MBA Portfolio & Case Study Management Studio",
+  "archetype": "Swiss Editorial & High-Precision Product Studio (Architectural & Warm Clay Accents)",
+  "context_type": "Portfolio + Simple Admin CRUD Hybrid",
+  "theme": {
+    "default": "light",
+    "toggle_supported": true,
+    "light_palette": {
+      "bg": "#FAF8F5",
+      "surface": "#FFFFFF",
+      "surface_subtle": "#F3EFEA",
+      "border": "#E5DFD7",
+      "border_strong": "#1A1918",
+      "text_primary": "#1A1918",
+      "text_secondary": "#5C564E",
+      "text_muted": "#8C8377",
+      "brand_primary": "#C85A32",
+      "brand_hover": "#A84622",
+      "accent_emerald": "#2D6A4F",
+      "accent_amber": "#D97706",
+      "accent_navy": "#1E293B"
+    },
+    "dark_palette": {
+      "bg": "#121110",
+      "surface": "#1A1918",
+      "surface_subtle": "#242220",
+      "border": "#33302C",
+      "border_strong": "#FAF8F5",
+      "text_primary": "#FAF8F5",
+      "text_secondary": "#BBB3A8",
+      "text_muted": "#8C8377",
+      "brand_primary": "#E06A3B",
+      "brand_hover": "#F07B4C",
+      "accent_emerald": "#40916C",
+      "accent_amber": "#F59E0B",
+      "accent_navy": "#38BDF8"
+    }
+  },
+  "typography": {
+    "heading_font": "Outfit / Playfair Display (Serif/Display Hybrid with strong character)",
+    "body_font": "IBM Plex Sans / DM Sans",
+    "mono_font": "Geist Mono / IBM Plex Mono",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-normal",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base text-secondary leading-relaxed",
+      "caption": "text-xs uppercase tracking-widest font-mono text-muted"
+    }
+  },
+  "layout_and_spacing": {
+    "grid_system": "Bento Grid Mode A (Tetris Grid for marketing & project showcase) + Mode B for Admin data analytics",
+    "container_padding": "px-4 sm:px-8 lg:px-12 py-12 lg:py-20",
+    "card_padding": "p-6 sm:p-8",
+    "border_radius": "rounded-2xl for main cards, rounded-lg for tags/inputs, rounded-full for pills",
+    "header": {
+      "type": "Crystal Glass Floating Header",
+      "styles": "backdrop-blur-xl bg-white/80 dark:bg-neutral-900/80 border border-black/10 dark:border-white/10 shadow-sm z-50 sticky top-4 mx-auto max-w-7xl rounded-full px-6 py-3"
+    }
+  },
+  "components_structure": {
+    "navigation": {
+      "brand_logo": "HS · Hiba Salim",
+      "nav_links": ["#about", "#pillars", "#projects", "#experience", "#skills", "#resume", "#contact"],
+      "action_buttons": ["Admin Studio Toggle (Editable CRUD Mode)", "Download Resume"]
+    },
+    "hero_section": {
+      "badge": "PGPM Candidate @ Great Lakes · Ex-Footwear PM & Designer",
+      "headline": "Designer turned Product Manager, shaping Business Strategy & Marketing.",
+      "subtext": "3 years building physical collections from concept to retail — now layering analytics, consulting frameworks, and GTM strategy to solve complex business problems.",
+      "cta_primary": "Explore Projects",
+      "cta_secondary": "Launch Admin Studio",
+      "profile_image": "https://images.unsplash.com/photo-1609436132311-e4b0c9370469?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHByb2ZpbGUlMjBoZWFkc2hvdCUyMGVkaXRvcmlhbCUyMHdvcmt8ZW58MHx8fHwxNzg4MzgwNTg2fDA&ixlib=rb-4.1.0&q=85",
+      "stat_highlights": [
+        {"value": "3 Yrs", "label": "Product & Sourcing Exp"},
+        {"value": "PGPM", "label": "Great Lakes Gurgaon"},
+        {"value": "8+", "label": "Strategy & Analytics Cases"}
+      ]
+    },
+    "mba_pillars": {
+      "title": "Core MBA Pillars & Competencies",
+      "pillars": [
+        {"name": "Marketing & Brand Strategy", "level": 88, "icon": "Target"},
+        {"name": "Structured Consulting & Frameworks", "level": 85, "icon": "Briefcase"},
+        {"name": "Business Strategy & Unit Economics", "level": 83, "icon": "TrendingUp"},
+        {"name": "Analytics & Data-Driven Insights", "level": 80, "icon": "BarChart3"},
+        {"name": "Supply Chain & Operations", "level": 90, "icon": "Truck"},
+        {"name": "Leadership & Cross-Functional PM", "level": 87, "icon": "Users"}
+      ]
+    },
+    "projects_section": {
+      "filter_tags": ["All", "Marketing", "Consulting", "Strategy", "Analytics", "Operations"],
+      "project_card_fields": ["id", "title", "summary", "role", "tools", "year", "category", "image", "live_link", "case_study_link", "impact_metrics", "key_takeaway", "is_featured"],
+      "card_interactive_features": [
+        "Click card to open full Case Study Reader drawer/modal",
+        "Direct link buttons for External Live Prototype and PDF/Case Study",
+        "Admin Edit / Delete quick triggers when Admin Mode is unlocked"
+      ]
+    },
+    "admin_editor_experience": {
+      "description": "Seamless, non-intrusive CRUD management interface for live project updates without complex backend requirements. Uses browser local storage + reset defaults.",
+      "features": [
+        "Header toggle 'Admin Mode' with subtle passcode protection or instant unlock",
+        "Add New Project floating modal & inline row edit",
+        "Form fields for: Title, Subtitle/Summary, Category, Role, Tools (comma-separated), Year, Cover Image URL (with built-in unsplash search preset suggestions), Live Link, Case-Study Link, Detailed Problem Statement, Solution & Metrics",
+        "Local Storage persistence with 'Reset to Initial Data' safeguard button",
+        "Toast notification feedback using Sonner upon Save/Update/Delete"
+      ]
+    },
+    "experience_timeline": {
+      "entries": [
+        {
+          "period": "2024 - 2025",
+          "role": "PGPM MBA Candidate",
+          "organization": "Great Lakes Institute of Management, Gurgaon",
+          "details": "Specializing in Marketing, Business Strategy, and Analytics. Participated in national case competitions and live industry projects."
+        },
+        {
+          "period": "2021 - 2024",
+          "role": "Footwear Designer & Product Manager",
+          "organization": "Retail & Apparel Industry (Footwear Division)",
+          "details": "Owned full lifecycle from concept sketch to manufacturing, vendor negotiation, line planning, and retail launch across seasonal collections."
+        },
+        {
+          "period": "2017 - 2021",
+          "role": "Bachelor of Design (B.Des)",
+          "organization": "FDDI Chennai",
+          "details": "Specialized in Footwear Design & Production technology, ergonomics, material science, and prototype testing."
+        }
+      ]
+    },
+    "resume_and_contact": {
+      "resume_preview": "Embedded interactive preview drawer with download options",
+      "contact_form": "Interactive email composer form with data-testid attributes and instant feedback toast"
+    }
+  },
+  "image_urls": {
+    "hero_avatar": "https://images.unsplash.com/photo-1609436132311-e4b0c9370469?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHByb2ZpbGUlMjBoZWFkc2hvdCUyMGVkaXRvcmlhbCUyMHdvcmt8ZW58MHx8fHwxNzg4MzgwNTg2fDA&ixlib=rb-4.1.0&q=85",
+    "footwear_studio": "https://images.unsplash.com/photo-1586868538513-51335a0c5337?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxmb290d2VhciUyMGRlc2lnbiUyMHByb2R1Y3QlMjBtYW5hZ2VtZW50JTIwc3R1ZGlvJTIwcHJvdG90eXBpbmd8ZW58MHx8fHwxNzg4MzgwNTg2fDA&ixlib=rb-4.1.0&q=85",
+    "analytics_dashboard": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwY29uc3VsdGluZyUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3ODgzODA1ODZ8MA&ixlib=rb-4.1.0&q=85",
+    "mamaearth_strategy": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwY29uc3VsdGluZyUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3ODgzODA1ODZ8MA&ixlib=rb-4.1.0&q=85",
+    "amazon_logistics": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkJTIwY29uc3VsdGluZyUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3ODgzODA1ODZ8MA&ixlib=rb-4.1.0&q=85",
+    "prototype_design": "https://images.pexels.com/photos/38748847/pexels-photo-38748847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "motion_and_interactions": {
+    "libraries": ["motion (framer-motion standard)", "lucide-react icons"],
+    "stagger_children": 0.08,
+    "card_hover": "scale-[1.015] -translate-y-1 transition-all duration-300 ease-out shadow-lg shadow-black/5 border-brand_primary/30",
+    "button_press": "scale-95 transition-transform duration-150"
+  },
+  "accessibility_and_testing": {
+    "contrast_standards": "APCA 4.5:1 minimum on all body copy against warm sand / dark charcoal surfaces",
+    "data_testid_convention": "kebab-case data-testid on every interactive element (e.g., data-testid='nav-projects-link', data-testid='project-card-1', data-testid='admin-edit-project-button', data-testid='admin-save-project-btn')",
+    "keyboard_nav": "Full focus-visible ring outline on buttons, inputs, filter chips, and project cards"
+  },
+  "instructions_to_main_agent": [
+    "Recreate Hiba Salim's MBA portfolio with high-precision Swiss-architectural visual aesthetics.",
+    "Implement the project editor/admin system with local storage persistence and full CRUD functionality (Add, Edit, Delete, Reset).",
+    "Use Lucide icons, Sonner toast notifications, and Motion for smooth interactive state transitions.",
+    "Ensure responsive support from mobile viewport (375px) to ultra-wide displays.",
+    "Tag all buttons, cards, modals, inputs, and filters with explicit data-testid attributes."
+  ]
+}
