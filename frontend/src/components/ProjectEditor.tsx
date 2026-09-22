@@ -52,7 +52,7 @@ export default function ProjectEditor({ open, project, onOpenChange, onSave }: P
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent showCloseButton={false} className="max-h-[90vh] max-w-2xl overflow-y-auto border-border bg-card p-0" data-testid="project-editor-dialog">
+      <DialogContent showCloseButton={false} className="max-h-[90vh] overflow-y-auto border-border bg-card p-0 sm:max-w-2xl" data-testid="project-editor-dialog">
         <form onSubmit={submit} data-testid="project-editor-form">
           <DialogHeader className="border-b border-border px-6 py-6 sm:px-8">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-brand" data-testid="project-editor-kicker">Admin studio / project record</p>

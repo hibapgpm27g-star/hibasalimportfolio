@@ -1,15 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/outfit";
-@import "@fontsource/ibm-plex-sans";
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/dm-sans";
 @import "@fontsource-variable/jetbrains-mono";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --font-heading: 'Outfit Variable', sans-serif;
-    --font-sans: 'IBM Plex Sans', sans-serif;
+    --font-heading: 'Playfair Display Variable', serif;
+    --font-sans: 'DM Sans Variable', sans-serif;
     --font-mono: 'JetBrains Mono Variable', monospace;
     --color-ink: var(--ink);
     --color-brand: var(--brand);
@@ -19,6 +19,10 @@
     --color-amber: var(--amber);
     --color-navy: var(--navy);
     --color-surface-subtle: var(--surface-subtle);
+    --color-pop-pink: var(--pop-pink);
+    --color-pop-lime: var(--pop-lime);
+    --color-pop-blue: var(--pop-blue);
+    --color-pop-yellow: var(--pop-yellow);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -60,32 +64,36 @@
 }
 
 :root {
-    --background: #faf8f5;
-    --foreground: #1a1918;
-    --card: #ffffff;
-    --card-foreground: #1a1918;
-    --popover: #ffffff;
-    --popover-foreground: #1a1918;
-    --primary: #1a1918;
-    --primary-foreground: #faf8f5;
-    --secondary: #f3efea;
-    --secondary-foreground: #1a1918;
-    --muted: #f3efea;
-    --muted-foreground: #5c564e;
-    --accent: #f3efea;
-    --accent-foreground: #1a1918;
+    --background: #fff8ed;
+    --foreground: #25151f;
+    --card: #fffdf8;
+    --card-foreground: #25151f;
+    --popover: #fffdf8;
+    --popover-foreground: #25151f;
+    --primary: #25151f;
+    --primary-foreground: #fff8ed;
+    --secondary: #f8e7df;
+    --secondary-foreground: #25151f;
+    --muted: #f8e7df;
+    --muted-foreground: #67565f;
+    --accent: #d9f38c;
+    --accent-foreground: #25151f;
     --destructive: #b42318;
-    --border: #e5dfd7;
-    --input: #e5dfd7;
-    --ring: #c85a32;
-    --ink: #1a1918;
-    --brand: #c85a32;
-    --brand-hover: #a84622;
-    --brand-light: #f19a73;
+    --border: #ddcfc7;
+    --input: #ddcfc7;
+    --ring: #ee563f;
+    --ink: #25151f;
+    --brand: #ee563f;
+    --brand-hover: #cf3e2a;
+    --brand-light: #ffad98;
     --emerald: #2d6a4f;
     --amber: #d97706;
     --navy: #1e293b;
-    --surface-subtle: #f3efea;
+    --surface-subtle: #f8e7df;
+    --pop-pink: #f5b7cf;
+    --pop-lime: #d9f38c;
+    --pop-blue: #9bdcf5;
+    --pop-yellow: #ffd869;
     --chart-1: oklch(0.87 0 0);
     --chart-2: oklch(0.556 0 0);
     --chart-3: oklch(0.439 0 0);
@@ -103,32 +111,36 @@
 }
 
 .dark {
-    --background: #121110;
-    --foreground: #faf8f5;
-    --card: #1a1918;
-    --card-foreground: #faf8f5;
-    --popover: #1a1918;
-    --popover-foreground: #faf8f5;
-    --primary: #faf8f5;
-    --primary-foreground: #1a1918;
-    --secondary: #242220;
-    --secondary-foreground: #faf8f5;
-    --muted: #242220;
+    --background: #1b1118;
+    --foreground: #fff8ed;
+    --card: #271a22;
+    --card-foreground: #fff8ed;
+    --popover: #271a22;
+    --popover-foreground: #fff8ed;
+    --primary: #fff8ed;
+    --primary-foreground: #25151f;
+    --secondary: #35242e;
+    --secondary-foreground: #fff8ed;
+    --muted: #35242e;
     --muted-foreground: #bbb3a8;
-    --accent: #242220;
-    --accent-foreground: #faf8f5;
+    --accent: #d9f38c;
+    --accent-foreground: #25151f;
     --destructive: #f97066;
-    --border: #33302c;
-    --input: #33302c;
-    --ring: #e06a3b;
-    --ink: #faf8f5;
-    --brand: #e06a3b;
-    --brand-hover: #f07b4c;
-    --brand-light: #f5a17d;
+    --border: #493540;
+    --input: #493540;
+    --ring: #ff7964;
+    --ink: #fff8ed;
+    --brand: #ff7964;
+    --brand-hover: #ff957f;
+    --brand-light: #ffb9a8;
     --emerald: #40916c;
     --amber: #f59e0b;
     --navy: #38bdf8;
-    --surface-subtle: #242220;
+    --surface-subtle: #35242e;
+    --pop-pink: #f5b7cf;
+    --pop-lime: #d9f38c;
+    --pop-blue: #9bdcf5;
+    --pop-yellow: #ffd869;
     --chart-1: oklch(0.87 0 0);
     --chart-2: oklch(0.556 0 0);
     --chart-3: oklch(0.439 0 0);
@@ -161,6 +173,22 @@
 
 .eyebrow {
   @apply font-mono text-[10px] uppercase tracking-[0.22em] text-brand;
+}
+
+.playful-underline {
+  text-decoration-line: underline;
+  text-decoration-color: var(--pop-yellow);
+  text-decoration-thickness: 0.16em;
+  text-underline-offset: 0.08em;
+}
+
+@keyframes gentle-bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.sticker-float {
+  animation: gentle-bob 5s ease-in-out infinite;
 }
 
 ::selection {

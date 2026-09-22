@@ -33,9 +33,9 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
       onClick={() => onOpen(project)}
       onKeyDown={handleCardKeyDown}
       data-testid={`project-card-${project.id}`}
-      className="group cursor-pointer overflow-hidden rounded-2xl border border-border bg-card text-left shadow-[0_12px_32px_rgba(26,25,24,0.04)] outline-none transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-[0_20px_42px_rgba(26,25,24,0.10)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4"
+      className={`group cursor-pointer overflow-hidden rounded-[1.75rem] border-2 border-ink/15 bg-card text-left shadow-[6px_6px_0_var(--brand)] outline-none transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:-rotate-[0.35deg] hover:border-ink hover:shadow-[10px_10px_0_var(--pop-lime)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 ${project.isFeatured ? "lg:col-span-2 lg:grid lg:grid-cols-[1.15fr_0.85fr]" : ""}`}
     >
-      <div className="relative aspect-[1.2/0.78] overflow-hidden bg-muted" data-testid={`project-image-frame-${project.id}`}>
+      <div className={`relative aspect-[1.2/0.78] overflow-hidden bg-muted ${project.isFeatured ? "lg:aspect-auto lg:min-h-[31rem]" : ""}`} data-testid={`project-image-frame-${project.id}`}>
         <img
           src={project.image}
           alt={`${project.title} project preview`}
@@ -51,18 +51,24 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
             {project.year}
           </span>
         </div>
+        {project.status === "in-progress" && (
+          <span className="absolute right-5 top-5 inline-flex items-center gap-2 rounded-full bg-[#106b43] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-white" data-testid={`project-status-${project.id}`}>
+            <span className="size-1.5 animate-pulse rounded-full bg-white" /> In progress
+          </span>
+        )}
         {project.isFeatured && (
           <span className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-[0.2em] text-white" data-testid={`project-featured-label-${project.id}`}>
-            Featured study
+            Start here · Featured deep-dive
           </span>
         )}
       </div>
-      <div className="space-y-4 p-6 sm:p-7" data-testid={`project-card-content-${project.id}`}>
+      <div className={`space-y-4 p-6 sm:p-7 ${project.isFeatured ? "lg:flex lg:flex-col lg:justify-between lg:p-10" : ""}`} data-testid={`project-card-content-${project.id}`}>
         <div className="flex items-start justify-between gap-4" data-testid={`project-card-heading-${project.id}`}>
           <div>
             <h3 className="font-heading text-2xl font-semibold tracking-tight text-ink" data-testid={`project-title-${project.id}`}>
               {project.title}
             </h3>
+            {project.brandMark && <span className="mt-2 inline-block font-heading text-xs font-semibold tracking-[0.24em] text-brand" data-testid={`project-brand-mark-${project.id}`}>{project.brandMark}</span>}
             <p className="mt-2 text-sm leading-6 text-muted-foreground" data-testid={`project-summary-${project.id}`}>
               {project.summary}
             </p>
@@ -89,7 +95,7 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
             </div>
           ) : (
             <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand" data-testid={`project-read-link-${project.id}`}>
-              Read case study <ExternalLink className="size-3.5" aria-hidden="true" />
+              Open the evidence <ExternalLink className="size-3.5" aria-hidden="true" />
             </span>
           )}
         </div>
