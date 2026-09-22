@@ -2,7 +2,7 @@
 
 ## What it does
 
-Single-page MBA portfolio for Hiba Salim, covering about, MBA pillars, selected projects, experience, skills, resume CTA, and contact. The visual voice is playful editorial and recruiter-ready: butter yellow, coral, pink, blue, and lime accents; bold bordered cards; Playfair Display headlines; DM Sans body copy; conversational microcopy; and a persistent light/dark theme toggle. The tone draws inspiration from high-energy personal-brand storytelling without copying the reference brand or its text.
+Single-page MBA portfolio for Hiba Salim, covering about, MBA pillars, selected projects, experience, skills, resume CTA, business quotes, and contact. The visual voice is colorful, optimistic, playful editorial, and recruiter-ready. Its fixed light palette is Airplane View `#80B0E8`, Peony Bundle `#FFC0C0`, Tropical Rain `#008471`, Autumn Lavender `#D1CAE8`, Limeade `#D6D35F`, Tomato Jam `#C45F3F`, Pure Sun `#F4D242`, Monet Ponds `#898E46`, and Bubble Gum `#F29CC3`, grounded by cream and ink. Playfair Display headlines, DM Sans body copy, bold bordered cards, conversational microcopy, and rotating color surfaces create one coherent art direction.
 
 ## Project data model
 
@@ -14,7 +14,9 @@ Projects are stored locally in the browser under `hiba-portfolio-projects-v2`. C
 - Admin Studio is an instant local unlock from the header or hero. It supports add, edit, delete, and reset-to-default project records.
 - Project changes persist in localStorage and show Sonner feedback.
 - Contact form is a local feedback interaction only; no email integration is configured.
-- Theme toggle persists the selected light/dark preference in localStorage.
+- The site is intentionally light-only so the supplied nine-color palette remains consistent.
+- Three original business-belief quotes are drafted from Hiba's existing story and presented as colorful editorial cards for later wording review.
+- Public positioning uses “Product Designer & Product Manager” and product-design language throughout; footwear-collection positioning has been removed.
 - Evidence-backed default projects include India Tourism DSS, Digital Campus Logistics (SPMS), Go Zero retail strategy, Amazon fleet optimization, CIAN Agro financial analysis, and a Bayer live project marked in progress.
 - Bayer's official logo and verified outcomes remain pending user-provided assets/details; the current card uses a text mark and explicitly avoids claiming outcomes.
 

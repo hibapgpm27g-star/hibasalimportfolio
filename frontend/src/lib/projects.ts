@@ -85,7 +85,7 @@ const covers = {
   amazon: "https://static.prod-images.emergentagent.com/jobs/811eadd8-c38a-45e2-b601-bc4fdda81358/images/8fb30f848400ab5857c12c79a121a33ceecca0cd1c8a10da408f50ca3725b386.jpeg",
   bayer: "https://static.prod-images.emergentagent.com/jobs/811eadd8-c38a-45e2-b601-bc4fdda81358/images/7cc4fd236c4aae0a2ef86f022becf194278733325951775510bcd97d2ab8a8b3.jpeg",
   strategy: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
-  footwear: "https://images.unsplash.com/photo-1586868538513-51335a0c5337?auto=format&fit=crop&w=1200&q=85",
+  productDesign: "https://images.unsplash.com/photo-1586868538513-51335a0c5337?auto=format&fit=crop&w=1200&q=85",
 };
 
 const reportUrls = {
@@ -384,7 +384,7 @@ export const defaultProjects: Project[] = [
     tools: ["Consumer Interviews", "Survey Design", "Segmentation"],
     year: "2025",
     category: "Marketing",
-    image: covers.footwear,
+    image: covers.productDesign,
     liveLink: "",
     caseStudyLink: "",
     details: "Turned qualitative interviews and desk research into a target segment, differentiated positioning, and learning-led channel plan.",

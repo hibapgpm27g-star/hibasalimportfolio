@@ -13,7 +13,18 @@ interface ProjectCardProps {
   onDelete: (project: Project) => void;
 }
 
+const cardSurfaces = [
+  "bg-airplane-view",
+  "bg-peony-bundle",
+  "bg-autumn-lavender",
+  "bg-limeade",
+  "bg-pure-sun",
+  "bg-bubble-gum",
+];
+
 export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete }: ProjectCardProps) {
+  const colorIndex = [...project.id].reduce((total, character) => total + character.charCodeAt(0), 0) % cardSurfaces.length;
+  const surface = cardSurfaces[colorIndex];
   const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
@@ -33,7 +44,7 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
       onClick={() => onOpen(project)}
       onKeyDown={handleCardKeyDown}
       data-testid={`project-card-${project.id}`}
-      className={`group cursor-pointer overflow-hidden rounded-[1.75rem] border-2 border-ink/15 bg-card text-left shadow-[6px_6px_0_var(--brand)] outline-none transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:-rotate-[0.35deg] hover:border-ink hover:shadow-[10px_10px_0_var(--pop-lime)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 ${project.isFeatured ? "lg:col-span-2 lg:grid lg:grid-cols-[1.15fr_0.85fr]" : ""}`}
+      className={`group cursor-pointer overflow-hidden rounded-[1.75rem] border-2 border-[#25151f] ${surface} text-left text-[#25151f] shadow-[6px_6px_0_#25151f] outline-none transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:-rotate-[0.35deg] hover:shadow-[10px_10px_0_var(--pure-sun)] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 ${project.isFeatured ? "lg:col-span-2 lg:grid lg:grid-cols-[1.15fr_0.85fr]" : ""}`}
     >
       <div className={`relative aspect-[1.2/0.78] overflow-hidden bg-muted ${project.isFeatured ? "lg:aspect-auto lg:min-h-[31rem]" : ""}`} data-testid={`project-image-frame-${project.id}`}>
         <img
@@ -65,11 +76,11 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
       <div className={`space-y-4 p-6 sm:p-7 ${project.isFeatured ? "lg:flex lg:flex-col lg:justify-between lg:p-10" : ""}`} data-testid={`project-card-content-${project.id}`}>
         <div className="flex items-start justify-between gap-4" data-testid={`project-card-heading-${project.id}`}>
           <div>
-            <h3 className="font-heading text-2xl font-semibold tracking-tight text-ink" data-testid={`project-title-${project.id}`}>
+            <h3 className="font-heading text-2xl font-semibold tracking-tight text-[#25151f]" data-testid={`project-title-${project.id}`}>
               {project.title}
             </h3>
-            {project.brandMark && <span className="mt-2 inline-block font-heading text-xs font-semibold tracking-[0.24em] text-brand" data-testid={`project-brand-mark-${project.id}`}>{project.brandMark}</span>}
-            <p className="mt-2 text-sm leading-6 text-muted-foreground" data-testid={`project-summary-${project.id}`}>
+            {project.brandMark && <span className="mt-2 inline-block font-heading text-xs font-semibold tracking-[0.24em] text-tomato-jam" data-testid={`project-brand-mark-${project.id}`}>{project.brandMark}</span>}
+            <p className="mt-2 text-sm leading-6 text-[#25151f]/70" data-testid={`project-summary-${project.id}`}>
               {project.summary}
             </p>
           </div>
@@ -77,13 +88,13 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
         </div>
         <div className="flex flex-wrap gap-2" data-testid={`project-tools-${project.id}`}>
           {project.tools.map((tool) => (
-            <span key={tool} className="rounded-full bg-muted px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground" data-testid={`project-tool-${project.id}-${tool.toLowerCase().replaceAll(" ", "-")}`}>
+            <span key={tool} className="rounded-full border border-[#25151f]/15 bg-white/55 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#25151f]/70" data-testid={`project-tool-${project.id}-${tool.toLowerCase().replaceAll(" ", "-")}`}>
               {tool}
             </span>
           ))}
         </div>
-        <div className="flex items-center justify-between border-t border-border pt-4" data-testid={`project-card-footer-${project.id}`}>
-          <span className="text-xs font-medium text-muted-foreground" data-testid={`project-role-${project.id}`}>{project.role}</span>
+        <div className="flex items-center justify-between border-t border-[#25151f]/20 pt-4" data-testid={`project-card-footer-${project.id}`}>
+          <span className="text-xs font-medium text-[#25151f]/65" data-testid={`project-role-${project.id}`}>{project.role}</span>
           {isAdmin ? (
             <div className="flex items-center gap-1" data-testid={`project-admin-actions-${project.id}`} onClick={(event) => event.stopPropagation()}>
               <Button type="button" size="icon-sm" variant="ghost" onClick={() => onEdit(project)} aria-label={`Edit ${project.title}`} data-testid={`admin-edit-project-button-${project.id}`}>
@@ -94,7 +105,7 @@ export default function ProjectCard({ project, isAdmin, onOpen, onEdit, onDelete
               </Button>
             </div>
           ) : (
-            <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand" data-testid={`project-read-link-${project.id}`}>
+            <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#25151f]" data-testid={`project-read-link-${project.id}`}>
               Open the evidence <ExternalLink className="size-3.5" aria-hidden="true" />
             </span>
           )}

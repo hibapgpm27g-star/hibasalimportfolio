@@ -52,9 +52,9 @@ export default function ProjectEditor({ open, project, onOpenChange, onSave }: P
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent showCloseButton={false} className="max-h-[90vh] overflow-y-auto border-border bg-card p-0 sm:max-w-2xl" data-testid="project-editor-dialog">
+      <DialogContent showCloseButton={false} className="max-h-[90vh] overflow-y-auto border-2 border-ink bg-background p-0 sm:max-w-2xl" data-testid="project-editor-dialog">
         <form onSubmit={submit} data-testid="project-editor-form">
-          <DialogHeader className="border-b border-border px-6 py-6 sm:px-8">
+          <DialogHeader className="border-b-2 border-ink bg-autumn-lavender px-6 py-6 text-[#25151f] sm:px-8">
             <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-brand" data-testid="project-editor-kicker">Admin studio / project record</p>
             <DialogTitle className="font-heading text-3xl font-semibold text-ink" data-testid="project-editor-title">{project ? "Edit project" : "Add a new project"}</DialogTitle>
             <DialogDescription data-testid="project-editor-description">Keep the portfolio current with the story, signals, and links a recruiter needs to act.</DialogDescription>
@@ -107,9 +107,9 @@ export default function ProjectEditor({ open, project, onOpenChange, onSave }: P
               Feature this project at the top of the grid
             </label>
           </div>
-          <DialogFooter className="border-t border-border bg-muted/40 px-6 py-4 sm:px-8" data-testid="project-editor-footer">
+          <DialogFooter className="border-t-2 border-ink bg-peony-bundle px-6 py-4 sm:px-8" data-testid="project-editor-footer">
             <Button type="button" variant="outline" onClick={() => onOpenChange(false)} data-testid="project-editor-cancel-button">Cancel</Button>
-            <Button type="submit" data-testid="admin-save-project-button">{project ? "Save changes" : "Add project"}</Button>
+            <Button type="submit" className="bg-tropical-rain text-white hover:bg-monet-ponds" data-testid="admin-save-project-button">{project ? "Save changes" : "Add project"}</Button>
           </DialogFooter>
         </form>
       </DialogContent>
