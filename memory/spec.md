@@ -2,7 +2,7 @@
 
 ## What it does
 
-Single-page MBA portfolio for Hiba Salim, covering about, MBA pillars, selected projects, experience, skills, resume CTA, business quotes, and contact. The visual voice is colorful, optimistic, bubbly editorial, and recruiter-ready. The original soft palette remains documented in repository history; the active brighter treatment uses Airplane View `#69B9FF`, Peony Bundle `#FF9FB5`, bright Tropical Rain `#18C6AA`, Autumn Lavender `#BDB2FF`, Limeade `#DFF04A`, Tomato Jam `#FF6749`, Pure Sun `#FFD83D`, Monet Ponds `#B5C94A`, and Bubble Gum `#FF75B5`, grounded by cream and ink. Dark green no longer appears as a large section surface.
+Single-page MBA portfolio for Hiba Salim, covering about, MBA pillars, selected projects, experience, skills, resume CTA, business quotes, and contact. The visual voice is colorful, optimistic, playful editorial, and recruiter-ready. Its restored fixed light palette is Airplane View `#80B0E8`, Peony Bundle `#FFC0C0`, Tropical Rain `#008471`, Autumn Lavender `#D1CAE8`, Limeade `#D6D35F`, Tomato Jam `#C45F3F`, Pure Sun `#F4D242`, Monet Ponds `#898E46`, and Bubble Gum `#F29CC3`, grounded by cream and ink.
 
 ## Project data model
 
