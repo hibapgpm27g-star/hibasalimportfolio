@@ -2,7 +2,7 @@
 
 ## What it does
 
-Single-page MBA portfolio for Hiba Salim, covering about, MBA pillars, selected projects, experience, skills, resume CTA, business quotes, and contact. The visual voice is colorful, optimistic, playful editorial, and recruiter-ready. Its fixed light palette is Airplane View `#80B0E8`, Peony Bundle `#FFC0C0`, Tropical Rain `#008471`, Autumn Lavender `#D1CAE8`, Limeade `#D6D35F`, Tomato Jam `#C45F3F`, Pure Sun `#F4D242`, Monet Ponds `#898E46`, and Bubble Gum `#F29CC3`, grounded by cream and ink. Playfair Display headlines, DM Sans body copy, bold bordered cards, conversational microcopy, and rotating color surfaces create one coherent art direction.
+Single-page MBA portfolio for Hiba Salim, covering about, MBA pillars, selected projects, experience, skills, resume CTA, business quotes, and contact. The visual voice is colorful, optimistic, bubbly editorial, and recruiter-ready. The original soft palette remains documented in repository history; the active brighter treatment uses Airplane View `#69B9FF`, Peony Bundle `#FF9FB5`, bright Tropical Rain `#18C6AA`, Autumn Lavender `#BDB2FF`, Limeade `#DFF04A`, Tomato Jam `#FF6749`, Pure Sun `#FFD83D`, Monet Ponds `#B5C94A`, and Bubble Gum `#FF75B5`, grounded by cream and ink. Dark green no longer appears as a large section surface.
 
 ## Project data model
 
@@ -17,6 +17,7 @@ Projects are stored locally in the browser under `hiba-portfolio-projects-v2`. C
 - The site is intentionally light-only so the supplied nine-color palette remains consistent.
 - Three original business-belief quotes are drafted from Hiba's existing story and presented as colorful editorial cards for later wording review.
 - Public positioning uses “Product Designer & Product Manager” and product-design language throughout; footwear-collection positioning has been removed.
+- The hero uses Hiba's uploaded `llolo.jpeg` portrait with a bubbly yellow, teal, blue, and pink frame.
 - Evidence-backed default projects include India Tourism DSS, Digital Campus Logistics (SPMS), Go Zero retail strategy, Amazon fleet optimization, CIAN Agro financial analysis, and a Bayer live project marked in progress.
 - Bayer's official logo and verified outcomes remain pending user-provided assets/details; the current card uses a text mark and explicitly avoids claiming outcomes.
 
